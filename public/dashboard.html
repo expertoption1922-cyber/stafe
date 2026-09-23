@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>لوحة الموظف</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body data-page="dashboard">
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <h1>لوحة الموظف</h1>
+        </div>
+        <div class="topbar-actions">
+          <span id="userBadge" class="badge"></span>
+          <button id="themeToggle" class="theme-toggle" aria-label="تبديل الوضع الليلي">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+          </button>
+          <button id="logoutBtn" class="ghost-btn">تسجيل الخروج</button>
+        </div>
+      </header>
+
+      <main class="content-wrap">
+        <section class="sheet-panel">
+          <div class="panel-header">
+            <h2>ورقة بيانات الموظف</h2>
+          </div>
+
+          <div class="spreadsheet-wrap">
+            <table class="sheet-table" aria-label="Employee spreadsheet">
+              <thead>
+                <tr>
+                  <th>الاسم الكامل</th>
+                  <th>رقم الهاتف</th>
+                  <th>البريد الإلكتروني</th>
+                  <th>تاريخ الميلاد</th>
+                  <th>المدينة</th>
+                  <th>القسم</th>
+                  <th>المسمى الوظيفي</th>
+                  <th>تاريخ بدء العمل</th>
+                  <th>ملاحظات</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr id="employeeRow">
+                  <td><input class="cell-input" data-field="full_name" type="text" /></td>
+                  <td><input class="cell-input" data-field="phone" type="tel" /></td>
+                  <td><input class="cell-input" data-field="email" type="email" /></td>
+                  <td><input class="cell-input" data-field="birth_date" type="date" /></td>
+                  <td><input class="cell-input" data-field="city" type="text" /></td>
+                  <td><input class="cell-input" data-field="department" type="text" /></td>
+                  <td><input class="cell-input" data-field="job_title" type="text" /></td>
+                  <td><input class="cell-input" data-field="start_date" type="date" /></td>
+                  <td><input class="cell-input" data-field="notes" type="text" /></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="sheet-actions">
+            <button id="saveEmployeeBtn" class="primary-btn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11l3 3v13H5z"/><path d="M8 4v6h8V4M8 20v-6h8v6"/></svg>
+              حفظ البيانات
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div id="toast" class="toast"></div>
+    <script src="/app.js"></script>
+  </body>
+</html>

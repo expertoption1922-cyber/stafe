@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>نظام إدارة الموظفين</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script defer src="/app.js"></script>
+  </head>
+  <body data-page="home">
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="container nav-wrap">
+          <a href="/home" class="brand" aria-label="نظام إدارة الموظفين">
+            <span class="brand-mark">S</span>
+            <span>
+              <strong>نظام إدارة الموظفين</strong>
+              <small>Employee Management System</small>
+            </span>
+          </a>
+
+          <nav class="main-nav" aria-label="التنقل الرئيسي">
+            <a href="#home">الرئيسية</a>
+            <a href="#features">المميزات</a>
+            <a href="#how-it-works">كيف يعمل</a>
+            <a href="#security">الأمان</a>
+          </nav>
+
+          <div class="nav-actions">
+            <button id="themeToggle" class="theme-toggle" aria-label="تبديل الوضع الليلي">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 0 1 11.2 3a9 9 0 1 0 9.8 9.8Z"/></svg>
+            </button>
+            <a href="/login" class="btn btn-ghost">تسجيل الدخول</a>
+            <a href="/register" class="btn btn-primary">إنشاء حساب</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section id="home" class="hero">
+          <div class="container hero-grid">
+            <div class="hero-copy reveal">
+              <span class="eyebrow">نظام إداري متكامل</span>
+              <h1>إدارة موظفيك بطريقة أبسط وأكثر تنظيمًا</h1>
+              <p>
+                نظام إلكتروني يساعدك على إدارة بيانات الموظفين، تنظيم المعلومات، ومتابعة
+                كل التفاصيل من مكان واحد بطريقة احترافية وسريعة.
+              </p>
+              <div class="hero-actions">
+                <a href="/login" class="btn btn-primary large">تسجيل الدخول</a>
+                <a href="/register" class="btn btn-secondary large">إنشاء حساب</a>
+              </div>
+              <ul class="hero-points">
+                <li>إدارة بيانات دقيقة</li>
+                <li>صلاحيات آمنة</li>
+                <li>تصدير Excel</li>
+              </ul>
+            </div>
+
+            <div class="hero-visual reveal" aria-label="معاينة لوحة الإدارة">
+              <div class="dashboard-preview">
+                <div class="preview-topbar">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <div class="preview-body">
+                  <aside class="preview-sidebar">
+                    <div class="mini-block active"></div>
+                    <div class="mini-block"></div>
+                    <div class="mini-block"></div>
+                    <div class="mini-block"></div>
+                  </aside>
+                  <div class="preview-content">
+                    <div class="preview-cards">
+                      <div class="stat-card"></div>
+                      <div class="stat-card"></div>
+                      <div class="stat-card"></div>
+                    </div>
+                    <div class="spreadsheet-mini">
+                      <div class="mini-row head-row">
+                        <span></span><span></span><span></span>
+                      </div>
+                      <div class="mini-row"><span></span><span></span><span></span></div>
+                      <div class="mini-row"><span></span><span></span><span></span></div>
+                      <div class="mini-row"><span></span><span></span><span></span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="features" class="features section-space">
+          <div class="container">
+            <div class="section-heading reveal">
+              <span class="eyebrow">المميزات</span>
+              <h2>كل ما تحتاجه لإدارة بيانات الموظفين</h2>
+            </div>
+
+            <div class="feature-grid">
+              <article class="feature-card reveal">
+                <div class="icon-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18h16M7 15V7m5 8V4m5 11v-6"/></svg></div>
+                <h3>إدارة الموظفين</h3>
+                <p>تجميع كل بيانات الموظف في نقطة واحدة مع عرض منظم وسهل للمتابعة.</p>
+              </article>
+
+              <article class="feature-card reveal">
+                <div class="icon-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v10H4zM8 11h3m5 0h3"/></svg></div>
+                <h3>إدارة البيانات</h3>
+                <p>تحديث البيانات بشكل مباشر وسريع بطريقة مشابهة لورقة Excel.</p>
+              </article>
+
+              <article class="feature-card reveal">
+                <div class="icon-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7l7-4zM9.5 12l1.7 1.7 3.3-3.4"/></svg></div>
+                <h3>صلاحيات آمنة</h3>
+                <p>تحديد الوصول حسب الدور، مع حماية الحقول والطلبات في الخلفية.</p>
+              </article>
+
+              <article class="feature-card reveal">
+                <div class="icon-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 18h4M6 6h12v12H6zM9 9h6v6H9z"/></svg></div>
+                <h3>بحث وفلترة</h3>
+                <p>البحث السريع حسب الاسم أو الهاتف أو البريد الإلكتروني وكل قسمة.</p>
+              </article>
+
+              <article class="feature-card reveal">
+                <div class="icon-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18V8m5 10V5m5 13v-8"/></svg></div>
+                <h3>تصدير Excel</h3>
+                <p>تصدير جدول الموظفين إلى ملف Excel رسمي مع العناوين المخصصة.</p>
+              </article>
+
+              <article class="feature-card reveal">
+                <div class="icon-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h7V4h2v3h7v10H4zM8 12h8"/></svg></div>
+                <h3>الوصول من أي جهاز</h3>
+                <p>واجهة متجاوبة تناسب الحاسب، اللوحي، والهاتف مع تجربة موحدة.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="how-it-works" class="steps section-space">
+          <div class="container">
+            <div class="section-heading reveal">
+              <span class="eyebrow">كيف يعمل النظام؟</span>
+              <h2>خطوات بسيطة وسريعة</h2>
+            </div>
+
+            <div class="steps-grid">
+              <div class="step-card reveal">
+                <span class="step-no">01</span>
+                <h3>إنشاء الحساب</h3>
+                <p>سجل حسابك الجديد في دقائق قليلة ثم ابدأ رحلتك.</p>
+              </div>
+              <div class="step-card reveal">
+                <span class="step-no">02</span>
+                <h3>إدخال البيانات</h3>
+                <p>اكتب بياناتك مباشرة داخل جدول يشبه Excel بشكل مريح.</p>
+              </div>
+              <div class="step-card reveal">
+                <span class="step-no">03</span>
+                <h3>إدارة البيانات</h3>
+                <p>راجعها، عدّلها، أضفها، أو قم بتصديرها بسهولة.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="security" class="security section-space">
+          <div class="container security-grid">
+            <div class="security-copy reveal">
+              <span class="eyebrow">الأمان</span>
+              <h2>بياناتك منظمة ومحميّة</h2>
+              <ul>
+                <li>صلاحيات منفصلة بين المستخدم والـ Admin</li>
+                <li>تسجيل دخول آمن عبر جلسات</li>
+                <li>حماية الوصول إلى البيانات عبر Backend</li>
+                <li>إدارة مركزية للموظفين والملفات</li>
+              </ul>
+            </div>
+            <div class="security-panel reveal">
+              <div class="shield-icon">✓</div>
+              <div class="security-badges">
+                <span>User Access</span>
+                <span>Admin Access</span>
+                <span>SQLite</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-wrap">
+          <div>
+            <a href="/home" class="brand footer-brand" aria-label="نظام إدارة الموظفين">
+              <span class="brand-mark">S</span>
+              <span>
+                <strong>نظام إدارة الموظفين</strong>
+              </span>
+            </a>
+            <p>نظام متكامل لإدارة الموظفين والبيانات بشكل احترافي وسهل.</p>
+          </div>
+          <div class="footer-links">
+            <a href="#home">الرئيسية</a>
+            <a href="/login">تسجيل الدخول</a>
+            <a href="/register">إنشاء حساب</a>
+          </div>
+        </div>
+        <div class="footer-bottom">© 2026 نظام إدارة الموظفين</div>
+      </footer>
+    </div>
+  </body>
+</html>

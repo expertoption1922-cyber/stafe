@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تسجيل الدخول</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script defer src="/app.js"></script>
+  </head>
+  <body data-page="login">
+    <div class="auth-shell">
+      <div class="auth-card">
+        <div class="auth-brand">
+          <div class="brand-mark">S</div>
+          <div>
+            <h1>نظام إدارة الموظفين</h1>
+            <p>Employee Management System</p>
+          </div>
+        </div>
+
+        <div class="auth-layout">
+          <section class="auth-panel auth-panel--info">
+            <span class="eyebrow eyebrow--dark">مرحباً بعودتك</span>
+            <h2>سجل الدخول إلى لوحة التحكم</h2>
+            <p>الوصول السريع إلى الموظفين، البيانات، والتحديثات داخل بيئة آمنة ومنظمة.</p>
+            <div class="feature-list">
+              <div><span>✓</span> إدارة بيانات موحدة</div>
+              <div><span>✓</span> صلاحيات دقيقة</div>
+              <div><span>✓</span> تصدير Excel سريع</div>
+            </div>
+          </section>
+
+          <section class="auth-panel auth-panel--form">
+            <div class="auth-header-inline">
+              <h3>تسجيل الدخول</h3>
+            </div>
+
+            <form id="loginForm" class="auth-form" novalidate>
+              <div class="field-group">
+                <label for="loginEmail">البريد الإلكتروني</label>
+                <div class="input-wrap">
+                  <span class="input-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5A2.5 2.5 0 0 1 6.5 5h11A2.5 2.5 0 0 1 20 7.5v9A2.5 2.5 0 0 1 17.5 19h-11A2.5 2.5 0 0 1 4 16.5v-9Z"/><path d="m5 7 7 5 7-5"/></svg>
+                  </span>
+                  <input id="loginEmail" type="email" name="email" placeholder="name@example.com" required />
+                </div>
+              </div>
+
+              <div class="field-group">
+                <label for="loginPassword">كلمة المرور</label>
+                <div class="input-wrap">
+                  <span class="input-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+                  </span>
+                  <input id="loginPassword" type="password" name="password" placeholder="••••••••" required />
+                  <button type="button" class="password-toggle" aria-label="عرض كلمة المرور">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <button id="loginSubmit" type="submit" class="btn btn-primary btn-block">تسجيل الدخول</button>
+              <p class="auth-switch">
+                ليس لديك حساب؟
+                <a href="/register">إنشاء حساب جديد</a>
+              </p>
+            </form>
+          </section>
+        </div>
+
+       
+      </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+  </body>
+</html>

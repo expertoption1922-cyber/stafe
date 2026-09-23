@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>لوحة الإدارة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body data-page="admin">
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <h1>لوحة الإدارة</h1>
+        </div>
+        <div class="topbar-actions">
+          <span id="userBadge" class="badge"></span>
+          <button id="themeToggle" class="theme-toggle" aria-label="تبديل الوضع الليلي">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+          </button>
+          <button id="logoutBtn" class="ghost-btn">تسجيل الخروج</button>
+        </div>
+      </header>
+
+      <main class="content-wrap">
+        <section class="sheet-panel admin-panel">
+          <div class="panel-header admin-header">
+            <h2>جدول الموظفين</h2>
+          </div>
+
+          <div class="toolbar">
+            <input id="searchInput" type="text" placeholder="بحث عن موظف..." class="search-input" />
+            <select id="departmentFilter" class="filter-select">
+              <option value="">الكل</option>
+              <option value="الإدارة">الإدارة</option>
+              <option value="البرمجة">البرمجة</option>
+              <option value="الصيانة">الصيانة</option>
+              <option value="اللوجستيات">اللوجستيات</option>
+              <option value="المحاسبة">المحاسبة</option>
+            </select>
+            <button id="exportExcelBtn" class="secondary-btn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+              تصدير إلى Excel
+            </button>
+            <button id="saveAllChangesBtn" class="primary-btn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11l3 3v13H5z"/><path d="M8 4v6h8V4M8 20v-6h8v6"/></svg>
+              حفظ التعديلات
+            </button>
+          </div>
+
+          <div class="spreadsheet-wrap">
+            <table id="adminTable" class="sheet-table admin-table" aria-label="Admin employee spreadsheet">
+              <thead>
+                <tr>
+                  <th>الاسم الكامل</th>
+                  <th>رقم الهاتف</th>
+                  <th>البريد الإلكتروني</th>
+                  <th>تاريخ الميلاد</th>
+                  <th>المدينة</th>
+                  <th>القسم</th>
+                  <th>المسمى الوظيفي</th>
+                  <th>تاريخ بدء العمل</th>
+                  <th>ملاحظات</th>
+                  <th>تاريخ التسجيل</th>
+                  <th>الإجراءات</th>
+                </tr>
+              </thead>
+              <tbody id="adminTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div id="toast" class="toast"></div>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>
